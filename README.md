@@ -42,3 +42,10 @@ Add your partner in repository Settings > Collaborators. Both teammates clone th
 - serve.cjs and build.cjs: dependency-free local server and static build
 
 Run npm run check and npm run build before pushing. To use another static host, publish dist/.
+
+## Expanded studio
+
+Two original 2D fashion poses, skin-tone selection, plain SVG uploads (250 KB maximum), artwork rotation and text personalization. Drag or tap to position art/text; arrow keys move the selected layer. Save and JSON export include artwork, pose, text and placement. Existing saved designs remain supported. Generic fonts can render differently by device; production proofs should use approved outlined lettering. This does not import ibis Paint project files or provide a 3D fit simulation.
+
+See [COMMERCE.md](COMMERCE.md) for checkout architecture, order schema, payment verification and a staged implementation plan. Payments are not connected.
+

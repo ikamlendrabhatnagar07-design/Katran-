@@ -63,7 +63,7 @@
             <p class="eyebrow">THE KATRAN STENCIL STUDIO</p>
             <h2 id="studio-title">Put your mark <em>on it.</em></h2>
           </div>
-          <p>Start with a saved dress, choose a stencil, and tap the silhouette to place it. Save your concept on this device and download a brief to share with a maker.</p>
+          <p>Your sketchbook, your silhouette. Try a fashion figure, upload your own vector art, and add words that make it yours. Save a brief to share with your maker.</p>
         </div>
 
         <div class="customizer" aria-label="Dress stencil customizer">
@@ -116,11 +116,24 @@
               </div>
               <label class="range-label" for="scale">Pattern scale <output id="scale-value">100%</output><input id="scale" type="range" min="70" max="145" value="100" /></label>
             </div>
+            <div class="personalization">
+              <div class="control-head"><span>04</span><h3>Your artwork</h3></div>
+              <label class="upload-box" for="art-upload">Upload SVG artwork<input id="art-upload" type="file" accept=".svg,image/svg+xml" /><small>Vector shapes only · up to 250 KB. Outline text and flatten effects before exporting.</small></label>
+              <p id="art-status" class="field-note" role="status">Your artwork stays in this browser.</p>
+              <button id="remove-art" class="studio-small" type="button" disabled>Remove uploaded art</button>
+              <label class="studio-field">Artwork rotation <input id="art-rotation" type="range" min="-180" max="180" value="0" /></label>
+              <div class="control-head"><span>05</span><h3>Make it personal</h3></div>
+              <label class="studio-field">Your words <input id="personal-text" maxlength="32" placeholder="e.g. Bloom again" /></label>
+              <div class="studio-field-grid"><label class="studio-field">Lettering<select id="text-font"><option value="serif">Editorial serif</option><option value="sans-serif">Modern sans</option><option value="cursive">Handwritten</option></select></label><label class="studio-field">Text colour<input id="text-color" type="color" value="#f4f0e7" /></label></div>
+              <label class="studio-field">Text size <input id="text-size" type="range" min="10" max="30" value="18" /></label>
+              <label class="studio-field">Move on canvas<select id="active-layer"><option value="art">Artwork / stencil</option><option value="text">Personalized text</option></select></label>
+              <p class="field-note">Tap or drag to position. Focus the preview and use arrow keys for precise moves. Artwork and text are clipped to the dress.</p>
+            </div>
           </section>
 
           <section class="dress-stage" aria-label="Interactive dress preview">
-            <div class="stage-topline"><span>LIVE PREVIEW</span><span class="placement-copy">Tap the dress to place your stencil</span></div>
-            <button id="dress-canvas" class="dress-canvas" type="button" aria-describedby="placement-help" aria-label="Dress preview. Click or press enter to reposition the stencil.">
+            <div class="figure-toolbar"><label>Figure<select id="figure"><option value="atelier">Atelier pose</option><option value="runway">Runway pose</option><option value="flat">Dress only</option></select></label><label>Skin tone<input id="skin-tone" type="color" value="#b77a57" /></label><span>2D fashion sketch · not a fit simulation</span></div><div class="stage-topline"><span>LIVE PREVIEW</span><span class="placement-copy">Drag your art or text into place</span></div>
+            <button id="dress-canvas" class="dress-canvas" type="button" aria-describedby="placement-help" aria-label="Dress preview. Drag or tap to position the selected layer. Use arrow keys to move it.">
               <svg id="dress-svg" viewBox="0 0 420 540" role="img" aria-label="Customizable dress preview">
                 <defs>
                   <clipPath id="dress-clip"><path id="dress-shape-clip" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" /></clipPath>
@@ -129,10 +142,18 @@
                   <pattern id="dots-pattern" width="27" height="27" patternUnits="userSpaceOnUse"><circle class="pattern-color" cx="7" cy="7" r="4" fill="#D95735"/><circle class="pattern-color" cx="20" cy="20" r="2.5" fill="#D95735"/></pattern>
                   <pattern id="ray-pattern" width="34" height="34" patternUnits="userSpaceOnUse"><path class="pattern-stroke" d="M2 32 L32 2 M-8 22 L22 -8 M12 42 L42 12" fill="none" stroke="#D95735" stroke-width="5" stroke-linecap="round"/></pattern>
                 </defs>
+                <g id="fashion-figure" fill="#b77a57" stroke="#684b3d" stroke-width="2" stroke-linejoin="round">
+                  <path d="M197 53L195 80Q210 95 225 80L223 53Z"/><ellipse cx="210" cy="37" rx="19" ry="26"/>
+                  <path d="M191 39Q182 4 210 8Q237 7 228 42L222 24Q206 34 194 24Z" fill="#30251f" stroke="none"/>
+                  <path id="figure-arms" d="M170 90Q149 90 140 127L117 217L124 250L134 248L133 217L161 146L178 109ZM248 91Q269 91 279 127L303 217L296 250L286 248L288 217L259 144L242 110Z"/>
+                  <path id="figure-legs" d="M170 442L171 508L163 526Q176 532 186 523L204 444ZM216 444L234 523Q245 532 258 526L249 508L249 442Z"/>
+                </g>
                 <ellipse cx="210" cy="491" rx="134" ry="18" fill="#D7D0C4" opacity=".65" />
                 <path id="dress-fill" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" fill="#435C45" />
                 <g clip-path="url(#dress-clip)">
                   <rect id="stencil-fill" x="136" y="183" width="148" height="148" fill="url(#flora-pattern)" opacity=".96" />
+                  <image id="custom-art" x="136" y="183" width="148" height="148" preserveAspectRatio="xMidYMid meet" display="none" />
+                  <text id="dress-text" x="210" y="355" text-anchor="middle" dominant-baseline="middle" font-size="18" fill="#f4f0e7"></text>
                   <path class="dress-texture" d="M164 150 C178 190 158 355 144 457 M255 150 C243 210 270 375 285 459 M198 95 C212 180 210 340 205 460" fill="none" stroke="rgba(255,255,255,.17)" stroke-width="1" />
                 </g>
                 <path id="dress-outline" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" fill="none" stroke="#172820" stroke-width="3" stroke-linejoin="round" />

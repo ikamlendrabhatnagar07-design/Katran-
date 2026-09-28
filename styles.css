@@ -270,3 +270,23 @@ h1 em, h2 em { color: var(--lime); font-weight: inherit; }
 
 .export-design { margin: 1rem 2rem; background: none; border: 0; color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+
+/* Expanded fashion sketch studio */
+.personalization { margin-top: 1.5rem; }
+.studio-field { display:flex; flex-direction:column; gap:.55rem; margin:1rem 0; font-size:.78rem; font-weight:700; }
+.studio-field input:not([type=range]), .studio-field select, .figure-toolbar select { padding:.7rem; border:1px solid var(--line); background:#fbf9f3; color:var(--ink); width:100%; min-width:0; border-radius:4px; }
+.studio-field input[type=color] { height:43px; padding:4px; }
+.studio-field-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.upload-box { display:flex; flex-direction:column; gap:.8rem; padding:1rem; border:1px dashed #71806d; background:#e8eadf; font-size:.85rem; font-weight:700; }
+.upload-box input { max-width:100%; font-size:.72rem; }
+.upload-box small, .field-note { font-size:.73rem; line-height:1.6; font-weight:400; }
+.field-note { margin:.6rem 0 1rem; }
+.studio-small { padding:.6rem .8rem; background:transparent; color:var(--ink); border:1px solid var(--line); border-radius:4px; }
+.studio-small:disabled { opacity:.45; cursor:default; }
+.figure-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:1rem; padding:.3rem 0 1.2rem; border-bottom:1px solid var(--line); margin-bottom:1rem; }
+.figure-toolbar label { display:flex; align-items:center; gap:.5rem; font-size:.75rem; }
+.figure-toolbar span { width:100%; font-size:.65rem; color:#62685d; }
+.figure-toolbar input { width:35px; height:32px; padding:2px; border:1px solid var(--line); }
+.dress-stage { align-self:start; position:sticky; top:15px; }
+.dress-canvas { touch-action:none; }
+@media(max-width:960px) { .dress-stage { position:static; } }
