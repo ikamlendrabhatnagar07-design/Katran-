@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Katran is a circular fashion atelier for rewearing, remaking, and reselling clothes and fabric." />
+    <meta name="theme-color" content="#172820" />
+    <link rel="icon" type="image/svg+xml" href="./katran-icon.svg" />
+    <link rel="preload" as="image" href="./hero.svg" />
+    <title>Katran — Rewear, Reimagine, Restyle</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Katran home">
+        <img src="./katran-icon.svg" alt="" width="36" height="36" />
+        <span>katran</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#studio">Studio</a>
+        <a href="#market">Marketplace</a>
+        <a href="#learn">Learn</a>
+      </nav>
+      <a class="header-cta" href="#give">Join the loop <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">CIRCULAR FASHION, MADE PERSONAL</p>
+          <h1 id="hero-title">Let nothing beautiful <em>go to waste.</em></h1>
+          <p class="hero-lede">Katran connects your unloved clothes, leftover fabric, and local makers—then helps turn them into a piece you’ll reach for again.</p>
+          <div class="hero-actions">
+            <a class="button button-clay" href="#studio">Make your dress <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#give">I have clothes to give <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Katran impact note">
+          <span class="loop-mark" aria-hidden="true">↻</span>
+          <div><strong>1 piece</strong><br />can become a new beginning.</div>
+        </aside>
+        <div class="hero-stat">
+          <strong>12,460 kg</strong>
+          <span>illustrative impact goal</span>
+        </div>
+      </section>
+
+      <section class="intro section-shell" aria-labelledby="intro-title">
+        <div class="section-number" aria-hidden="true">01</div>
+        <div class="intro-heading">
+          <p class="eyebrow">FROM SCRAP TO SOMETHING LOVED</p>
+          <h2 id="intro-title">A wardrobe with a longer story.</h2>
+        </div>
+        <p class="intro-copy">Drop off what you no longer wear, find imperfect materials with promise, or make a one-off piece with a stencil of your own. Katran gives fabric a next chapter—and people a way to earn from it.</p>
+        <a class="round-link" href="#journey" aria-label="Explore Katran's circular journey">↓</a>
+      </section>
+
+      <section class="studio-section" id="studio" aria-labelledby="studio-title">
+        <div class="studio-heading section-shell">
+          <div>
+            <p class="eyebrow">THE KATRAN STENCIL STUDIO</p>
+            <h2 id="studio-title">Put your mark <em>on it.</em></h2>
+          </div>
+          <p>Start with a saved dress, choose a stencil, and tap the silhouette to place it. Save your concept on this device and download a brief to share with a maker.</p>
+        </div>
+
+        <div class="customizer" aria-label="Dress stencil customizer">
+          <section class="control-panel" aria-label="Customizer controls">
+            <div class="control-head">
+              <span>01</span><h3>Choose your base</h3>
+            </div>
+            <div class="option-row silhouettes" role="group" aria-label="Dress silhouette">
+              <button class="choice-card active" type="button" data-silhouette="midi" aria-pressed="true">
+                <span class="mini-dress mini-midi" aria-hidden="true"></span><strong>Midi slip</strong><small>₹1,480</small>
+              </button>
+              <button class="choice-card" type="button" data-silhouette="wrap" aria-pressed="false">
+                <span class="mini-dress mini-wrap" aria-hidden="true"></span><strong>Wrap dress</strong><small>₹1,690</small>
+              </button>
+              <button class="choice-card" type="button" data-silhouette="sundress" aria-pressed="false">
+                <span class="mini-dress mini-sundress" aria-hidden="true"></span><strong>Sun dress</strong><small>₹1,320</small>
+              </button>
+            </div>
+
+            <div class="control-head split-head">
+              <span>02</span><h3>Pick fabric colour</h3><span class="selected-name" id="fabric-name">Fig leaf</span>
+            </div>
+            <div class="swatches" role="group" aria-label="Fabric colour">
+              <button type="button" class="swatch active" data-fabric="#435C45" data-fabric-name="Fig leaf" style="--swatch:#435C45" aria-label="Fig leaf green" aria-pressed="true"></button>
+              <button type="button" class="swatch" data-fabric="#CF6C56" data-fabric-name="Terracotta" style="--swatch:#CF6C56" aria-label="Terracotta" aria-pressed="false"></button>
+              <button type="button" class="swatch" data-fabric="#C7BED8" data-fabric-name="Lilac wash" style="--swatch:#C7BED8" aria-label="Lilac wash" aria-pressed="false"></button>
+              <button type="button" class="swatch" data-fabric="#E5D8BE" data-fabric-name="Unbleached" style="--swatch:#E5D8BE" aria-label="Unbleached canvas" aria-pressed="false"></button>
+              <button type="button" class="swatch" data-fabric="#262B47" data-fabric-name="Midnight" style="--swatch:#262B47" aria-label="Midnight blue" aria-pressed="false"></button>
+            </div>
+
+            <div class="control-head">
+              <span>03</span><h3>Select a stencil</h3>
+            </div>
+            <div class="stencil-options" role="group" aria-label="Stencil pattern">
+              <button type="button" class="stencil-option active" data-pattern="flora" aria-pressed="true"><span class="stencil-swatch flora" aria-hidden="true"></span><span>Wild bloom</span></button>
+              <button type="button" class="stencil-option" data-pattern="checker" aria-pressed="false"><span class="stencil-swatch checker" aria-hidden="true"></span><span>Runway check</span></button>
+              <button type="button" class="stencil-option" data-pattern="dots" aria-pressed="false"><span class="stencil-swatch dots" aria-hidden="true"></span><span>Soft dot</span></button>
+              <button type="button" class="stencil-option" data-pattern="ray" aria-pressed="false"><span class="stencil-swatch ray" aria-hidden="true"></span><span>Sun ray</span></button>
+            </div>
+
+            <div class="color-scale-grid">
+              <div>
+                <label for="stencil-colour">Stencil ink</label>
+                <div class="ink-choice" id="stencil-colour" role="group" aria-label="Stencil ink colour">
+                  <button type="button" class="ink-dot active" data-ink="#D95735" style="--ink:#D95735" aria-label="Clay red" aria-pressed="true"></button>
+                  <button type="button" class="ink-dot" data-ink="#C7F000" style="--ink:#C7F000" aria-label="Katran lime" aria-pressed="false"></button>
+                  <button type="button" class="ink-dot" data-ink="#172820" style="--ink:#172820" aria-label="Ink" aria-pressed="false"></button>
+                  <button type="button" class="ink-dot" data-ink="#F4F0E7" style="--ink:#F4F0E7" aria-label="Paper" aria-pressed="false"></button>
+                </div>
+              </div>
+              <label class="range-label" for="scale">Pattern scale <output id="scale-value">100%</output><input id="scale" type="range" min="70" max="145" value="100" /></label>
+            </div>
+          </section>
+
+          <section class="dress-stage" aria-label="Interactive dress preview">
+            <div class="stage-topline"><span>LIVE PREVIEW</span><span class="placement-copy">Tap the dress to place your stencil</span></div>
+            <button id="dress-canvas" class="dress-canvas" type="button" aria-describedby="placement-help" aria-label="Dress preview. Click or press enter to reposition the stencil.">
+              <svg id="dress-svg" viewBox="0 0 420 540" role="img" aria-label="Customizable dress preview">
+                <defs>
+                  <clipPath id="dress-clip"><path id="dress-shape-clip" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" /></clipPath>
+                  <pattern id="flora-pattern" width="31" height="31" patternUnits="userSpaceOnUse"><circle class="pattern-color" cx="15.5" cy="15.5" r="4.4" fill="#D95735"/><circle class="pattern-color" cx="15.5" cy="5.5" r="2.8" fill="#D95735"/><circle class="pattern-color" cx="25.5" cy="15.5" r="2.8" fill="#D95735"/><circle class="pattern-color" cx="15.5" cy="25.5" r="2.8" fill="#D95735"/><circle class="pattern-color" cx="5.5" cy="15.5" r="2.8" fill="#D95735"/></pattern>
+                  <pattern id="checker-pattern" width="30" height="30" patternUnits="userSpaceOnUse"><rect class="pattern-color" width="15" height="15" fill="#D95735"/><rect class="pattern-color" x="15" y="15" width="15" height="15" fill="#D95735"/></pattern>
+                  <pattern id="dots-pattern" width="27" height="27" patternUnits="userSpaceOnUse"><circle class="pattern-color" cx="7" cy="7" r="4" fill="#D95735"/><circle class="pattern-color" cx="20" cy="20" r="2.5" fill="#D95735"/></pattern>
+                  <pattern id="ray-pattern" width="34" height="34" patternUnits="userSpaceOnUse"><path class="pattern-stroke" d="M2 32 L32 2 M-8 22 L22 -8 M12 42 L42 12" fill="none" stroke="#D95735" stroke-width="5" stroke-linecap="round"/></pattern>
+                </defs>
+                <ellipse cx="210" cy="491" rx="134" ry="18" fill="#D7D0C4" opacity=".65" />
+                <path id="dress-fill" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" fill="#435C45" />
+                <g clip-path="url(#dress-clip)">
+                  <rect id="stencil-fill" x="136" y="183" width="148" height="148" fill="url(#flora-pattern)" opacity=".96" />
+                  <path class="dress-texture" d="M164 150 C178 190 158 355 144 457 M255 150 C243 210 270 375 285 459 M198 95 C212 180 210 340 205 460" fill="none" stroke="rgba(255,255,255,.17)" stroke-width="1" />
+                </g>
+                <path id="dress-outline" d="M181 73 C190 88 230 88 239 73 L267 99 L252 160 C263 193 288 300 310 462 L110 462 C132 300 157 193 168 160 L153 99 Z" fill="none" stroke="#172820" stroke-width="3" stroke-linejoin="round" />
+                <path id="neck-detail" d="M181 73 C190 88 230 88 239 73" fill="none" stroke="#172820" stroke-width="3" />
+                <path d="M153 99 L168 160 M267 99 L252 160" fill="none" stroke="#172820" stroke-width="3" />
+              </svg>
+            </button>
+            <p id="placement-help" class="placement-help">Choose your pattern, then tap anywhere on the dress to move it. Save your design to keep the placement on this device.</p>
+            <div class="preview-summary">
+              <div><span>YOUR KATRAN PIECE</span><strong id="summary-name">Fig leaf midi slip</strong></div>
+              <div class="price"><span>ESTIMATED FROM</span><strong id="price">₹1,940</strong></div>
+              <button type="button" class="button button-ink" id="save-design">Save design <span aria-hidden="true">→</span></button>
+            </div>
+            <button type="button" class="text-link export-design" id="export-design">Download design brief ↓</button><p class="save-status" id="save-status" aria-live="polite"></p>
+          </section>
+        </div>
+      </section>
+
+      <section class="journey section-shell" id="journey" aria-labelledby="journey-title">
+        <div class="journey-title"><p class="eyebrow">THE KATRAN LOOP</p><h2 id="journey-title">Every piece finds its people.</h2></div>
+        <ol class="journey-steps">
+          <li><span>01</span><h3>Quality check</h3><p>We note colour, size, feel, and every flaw worth working with.</p></li>
+          <li><span>02</span><h3>Collect</h3><p>Clothes and leftover cuts are picked up before they become waste.</p></li>
+          <li><span>03</span><h3>Connect</h3><p>Materials meet tailors, students, and small makers who can use them.</p></li>
+          <li><span>04</span><h3>Distribute</h3><p>The repaired, remade, and resold pieces return to real wardrobes.</p></li>
+        </ol>
+      </section>
+
+      <section class="give-take section-shell" id="give" aria-labelledby="give-title">
+        <div class="give-card give-card-dark"><div><p class="eyebrow">HAVE MATERIAL?</p><h2 id="give-title">Pass it on, <em>beautifully.</em></h2><p>Give a bundle of clothing or extra fabric a clear, useful next stop.</p></div><a class="button button-lime" href="#market">List a bundle <span aria-hidden="true">→</span></a></div>
+        <div class="give-card give-card-paper"><div class="cutout-stack" aria-hidden="true"><span></span><span></span><span></span></div><div><p class="eyebrow">MAKE OR REMAKE</p><h2>One good idea<br />can <em>travel far.</em></h2><p>Find affordable materials, learn a process, then sell the piece you made.</p><a class="text-link" href="#learn">See how it works <span aria-hidden="true">→</span></a></div></div>
+      </section>
+
+      <section class="market-section" id="market" aria-labelledby="market-title">
+        <div class="section-shell market-heading"><div><p class="eyebrow">FROM THE MATERIAL MARKET</p><h2 id="market-title">Full of possibility.</h2></div><a class="text-link" href="#market">Browse all finds <span aria-hidden="true">→</span></a></div>
+        <div class="market-grid section-shell">
+          <article class="product-card"><div class="product-image material-one"><span class="tag">FABRIC BUNDLE</span><span class="material-shape shape-one"></span><span class="material-shape shape-two"></span></div><div class="product-meta"><div><h3>Indigo cotton cuts</h3><p>1.8 m · like new</p></div><strong>₹320</strong></div><button type="button" class="card-action">Add to board <span aria-hidden="true">↗</span></button></article>
+          <article class="product-card featured-card"><div class="product-image material-two"><span class="tag">REMADE PIECE</span><span class="dress-product" aria-hidden="true"></span></div><div class="product-meta"><div><h3>Sunday patchwork dress</h3><p>Made by Rani Studio</p></div><strong>₹1,980</strong></div><button type="button" class="card-action">Add to board <span aria-hidden="true">↗</span></button></article>
+          <article class="product-card"><div class="product-image material-three"><span class="tag">CLOTH BUNDLE</span><span class="stripe-fabric" aria-hidden="true"></span></div><div class="product-meta"><div><h3>Soft suiting offcuts</h3><p>6 pieces · checked</p></div><strong>₹410</strong></div><button type="button" class="card-action">View material <span aria-hidden="true">↗</span></button></article>
+        </div>
+      </section>
+
+      <section class="learn-section section-shell" id="learn" aria-labelledby="learn-title">
+        <div class="learn-card"><div class="learn-mark" aria-hidden="true">✳</div><p class="eyebrow">LEARN · MAKE · SELL</p><h2 id="learn-title">The next maker<br />could be <em>you.</em></h2><p>Mini lessons, trend-led prompts, and guides from people who know their way around a seam. Take an idea from saved video to your shopfront.</p><a class="button button-clay" href="#studio">Explore the learning room <span aria-hidden="true">→</span></a></div>
+        <div class="maker-list" aria-label="Illustrative Katran maker stories">
+          <article><span class="maker-initial coral">A</span><div><p>“I used to toss my tailoring scraps. Now my first collection started with them.”</p><strong>— Ayesha, home tailor</strong></div></article>
+          <article><span class="maker-initial lime">M</span><div><p>“Katran gives me materials to practise with—and a place to sell my work.”</p><strong>— Mira, fashion student</strong></div></article>
+          <article><span class="maker-initial lilac">S</span><div><p>“My daughter and I turned a bundle of shirts into her favourite dress.”</p><strong>— Saira, parent & maker</strong></div></article>
+        </div>
+      </section>
+
+      <section class="impact-strip" aria-label="Katran impact goals"><div><strong>Less waste</strong><span>for landfills</span></div><div><strong>More income</strong><span>for local makers</span></div><div><strong>Better access</strong><span>to quality fabric</span></div><div><strong>More stories</strong><span>in every seam</span></div></section>
+    </main>
+
+    <footer class="site-footer"><a class="brand" href="#top"><img src="./katran-icon.svg" alt="" width="30" height="30" /><span>katran</span></a><p>Keep good material moving.<br /><small>Hackathon prototype · sample listings and stories · no orders or pickups</small></p><div><a href="#give">Give material</a><a href="#studio">Make a piece</a><a href="#market">Find a story</a></div></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
